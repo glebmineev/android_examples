@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lesson78</string>
+    <string name="text_tab">Это создано с помощью LayoutInflater </string>
+</resources>

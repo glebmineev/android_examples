@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lesson67</string>
+    <string name="dflt">Обычный</string>
+    <string name="horiz">Горизонтальный</string>
+</resources>

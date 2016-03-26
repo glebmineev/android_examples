@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.gleb.lesson15.L15Activity">
+    <item
+        android:id="@+id/red"
+        android:orderInCategory="100"
+        android:title="@string/red_menu_item"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/green"
+        android:orderInCategory="100"
+        android:title="@string/green_menu_item"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/blue"
+        android:orderInCategory="100"
+        android:title="@string/blue_menu_item"
+        app:showAsAction="never" />
+</menu>

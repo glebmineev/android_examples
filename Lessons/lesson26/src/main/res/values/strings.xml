@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lesson26</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_time">ActivityTime</string>
+    <string name="title_activity_date">DateActivity</string>
+    <string name="title_activity_activity_date_ex">ActivityDateEx</string>
+</resources>
