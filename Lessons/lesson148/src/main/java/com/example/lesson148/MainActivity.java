@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.Region;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,30 +21,40 @@ public class MainActivity extends AppCompatActivity {
     class DrawView extends View {
 
         Paint p;
-        Rect rect;
+        Rect rect1;
+        Rect rect2;
+        Region.Op op = Region.Op.UNION;
 
         public DrawView(Context context) {
             super(context);
             p = new Paint();
             p.setStyle(Paint.Style.STROKE);
             p.setStrokeWidth(3);
-            rect = new Rect(210, 201, 410, 510);
+            rect1 = new Rect(180, 220, 340, 380);
+            rect2 = new Rect(280, 320, 440, 480);
         }
 
         @Override
         protected void onDraw(Canvas canvas) {
             canvas.drawARGB(80, 102, 204, 255);
 
+            // сетка
             p.setColor(Color.BLUE);
             drawGrid(canvas);
 
+            // красные прямоугольники
             p.setColor(Color.RED);
-            canvas.drawRect(rect, p);
+            canvas.drawRect(rect1, p);
+            canvas.drawRect(rect2, p);
 
+            // смещение
             canvas.translate(600, 0);
 
-            canvas.clipRect(rect);
+            // задание clip-области
+            canvas.clipRect(rect1);
+            canvas.clipRect(rect2, op);
 
+            // сетка
             p.setColor(Color.BLUE);
             drawGrid(canvas);
 
